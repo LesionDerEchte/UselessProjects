@@ -1,0 +1,165 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>My Google Map</title>
+	<style>
+		#map{
+			height:900px;
+			width:100%;
+		}
+		h2{
+			font-size: 25px;
+		}
+	</style>
+</head>
+<body>
+	<div id = "map"></div>
+	<script>
+		function initMap(){
+			var options = {
+				zoom:6,
+				center:{lat:50,lng:10}
+			}
+
+			var map = new google.maps.Map(document.getElementById('map'), options);
+
+			addMarker({
+				coords:{lat:48.218791,lng:11.624695}, 
+				title: "Allianz Arena",
+				png: "./1_1.jpg",
+				link: "https://allianz-arena.com/de",
+				home: "FC Bayern München",
+				away: ["FCA", "BSC"],
+				rating: "3.0",
+				average: "4.2",
+				address: "Werner-Heisenberg-Allee 25, 80939 München"
+			});
+			addMarker({
+				coords:{lat:52.457391,lng:13.568124}, 
+				title: "An der alten Försterei",
+				png: "./2_1.jpg",
+				link: "https://www.altefoersterei.berlin/",
+				home: "Union Berlin",
+				away: ["S04"],
+				rating: "4.5",
+				average: "3.9",
+				address: "An der Wuhlheide 263, 12555 Berlin"
+			});
+			addMarker({
+				coords:{lat:51.038196,lng:7.002292}, 
+				title: "BayArena",
+				png: "./3_1.jpg",
+				link: "https://www.bayer04.de/de-de/page/bayarena",
+				home: "Bayer 04 Leverkusen",
+				away: ["FCB", "RBL", "KOE"],
+				rating: "3.5",
+				average: "3.7",
+				address: "Bismarckstraße 122-124, 51373 Leverkusen"
+			});
+
+
+			function addMarker(props){
+				var marker = new google.maps.Marker({
+				position:props.coords,
+				map:map,
+				icon: './Marker.png',
+				size: 50,
+				});
+
+				if(props.title){
+					var infoWindow = new google.maps.InfoWindow({
+						content:
+						"<img src=\""+ props.png + "\" width=\"300px\" height=\"auto\">"+
+						"<h2 align=\"center\" style=\"line-height:0%\">"+props.title+"</h2>"+
+						"<p align=\"center\">"+props.address+"</p>"+
+						"<h3 align=\"center\"> Deine Gesamtbewertung: <br>"+
+						graphrating(props.rating)+
+						"Durchschn. Gesamtbewertung: <br>"+ 
+						graphrating(props.average)+
+						"<h3 align=\"center\">Besuchte Spiele:</h3>"+
+						games(props.home, props.away)
+					});
+
+					marker.addListener('mouseover', function(){
+						infoWindow.open(map, marker);
+					});
+
+					marker.addListener('mouseout', function(){
+						infoWindow.close(map, marker);
+					});
+
+					marker.addListener('click', function(){
+						window.open(props.link);
+					});
+				}
+			}
+			
+		}
+
+		function games(home, away) {
+			var text = "<p align=\"center\">";
+			for(var i = 0; i<away.length;i++) {
+				text += home + " vs " + away[i]+"<br>";
+			};
+			text+="</p>";
+			return text;
+		}
+
+		function graphrating(rating) {
+			var text = "<p align=\"center\">";
+			var counter = 0;
+			while(rating>=1) {
+				text += "<img src=\"SoccerballSmall.png\">";
+				rating-=1;
+				counter+=1;
+			};
+			if(rating>=0.05&&rating<0.15){
+				text += "<img src=\"1SoccerballSmall.png\">";
+				counter+=1;
+			}
+			else if(rating>=0.15&&rating<0.25){
+				text += "<img src=\"2SoccerballSmall.png\">";
+				counter+=1;
+			}
+			else if(rating>=0.25&&rating<0.35){
+				text += "<img src=\"3SoccerballSmall.png\">";
+				counter+=1;
+			}
+			else if(rating>=0.35&&rating<0.45){
+				text += "<img src=\"4SoccerballSmall.png\">";
+				counter+=1;
+			}
+			else if(rating>=0.45&&rating<0.55){
+				text += "<img src=\"5SoccerballSmall.png\">";
+				counter+=1;
+			}
+			else if(rating>=0.55&&rating<0.65){
+				text += "<img src=\"6SoccerballSmall.png\">";
+				counter+=1;
+			}
+			else if(rating>=0.65&&rating<0.75){
+				text += "<img src=\"7SoccerballSmall.png\">";
+				counter+=1;
+			}
+			else if(rating>=0.75&&rating<0.85){
+				text += "<img src=\"8SoccerballSmall.png\">";
+				counter+=1;
+			}
+			else if(rating>=0.85&&rating<0.95){
+				text += "<img src=\"9SoccerballSmall.png\">";
+				counter+=1;
+			}
+			while(counter < 5){
+				text += "<img src=\"0SoccerballSmall.png\">";
+				counter+=1;
+			}
+			text+="</p>";
+			return text;
+		}
+	</script>
+	<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHwbO4NbGGj1M1zugtnWylBYkQOHmLhMU&callback=initMap">
+	</script>
+
+</body>
+</html> 

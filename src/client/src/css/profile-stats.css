@@ -1,0 +1,24 @@
+.ProfileStats{
+    width: 1500px;
+    height: 200px;
+    text-align: center;
+   
+    background-color: gray;
+    
+    display: flex;
+    
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.Content{
+    
+    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  
+    
+}

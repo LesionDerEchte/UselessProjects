@@ -1,0 +1,45 @@
+Spiele
+Auf der Spieleseite sollen alle nach Liga gefiltert angezeigt werden, vergangene Spiele können hier bewertet werden und für Zukünftige können Karten reserviert werden
+
+News
+Auf der Newsseite werden Updates angezeigt
+
+Profil
+Über Profil kommt man auf sein eigenes Profil
+Wenn noch kein Profil existiert kommt man dadurch auf ein Anmeldefenster. Die Anmeldung funktioniert mit Email, diese muss bestätigt werden.
+Auf andere Profile kommt man über Community oder durch das klicken auf die Profile bei Reviews, diese sind genau gleich aufgebaut
+
+	Folgenbutton
+	Der Folgebutton wird nur auf fremden Profilen angezeigt, durch das klicken darauf kann dem User gefolgt werden
+
+	Profil
+	Unter Profil werden generelle Daten über den User angezeigt: Lieblingsstadion, Lieblingsverein, Nationalität, Grafik mit der Verteilung aller bisherigen Bewertungen
+
+	Stadien
+	Anzeige aller bisher besuchten Stadien
+
+	Tagebuch
+	Anzeige aller Besuchten Spiele mit Tag und Bewertung
+
+	Rezensionen
+	Anzeige aller Rezensionen des Users
+
+	OPTIONAL: Statistik
+	diverse Statistiken des Users
+
+	OPTIONAL: Erfolge
+	diverse Erfolge die gesammelt werden können, zB "Alle Bundesliga Stadien der Saison 2022/23 besucht"
+
+	OPTIONAL: Map
+	zeigt eine Map mit allen Besuchten Stadien des Users
+
+Stadien
+Unter Stadien kann nach Stadien gefiltert werden, diese können auch nach bestimmten Faktoren sortiert werden.
+Es kann aber auch einfach nach einem Stadionnamen gesucht werden.
+Durch klicken auf ein Stadion wird die Seite von diesem geöffnet, dort gibt es die Punkte Gesamt, Stimmung, Standort, Aussicht, Essen und Ausstattung
+Unter all diesen Punkten gibt es eine Grafik der Verteilung aller bewertungen, daneben werden die bisherigen Bewertungen des Users in diesem Stadion angezeigt.
+Darunter sind die populärsten Reviews zu diesem Stadion.
+Auf der Stadionseite selbst gibt es oben mehrere Bilder vom Stadion und ein paar Informationen über dieses.
+	
+Community
+Hier werden die populärsten Rezensionen angezeigt und es können andere User gesucht werden

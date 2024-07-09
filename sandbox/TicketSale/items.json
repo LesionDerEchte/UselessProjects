@@ -1,0 +1,40 @@
+{
+  "tickets": [
+    {
+      "id": 1,
+      "name": "Kategorie - 1A",
+      "price": 7400,
+      "imgName": "100_1A.png"
+    },
+    {
+      "id": 2,
+      "name": "Kategorie - 2A",
+      "price": 5400,
+      "imgName": "100_2A.png"
+    },
+    {
+      "id": 3,
+      "name": "Kategorie - 1B",
+      "price": 4800,
+      "imgName": "100_1B.png"
+    },
+    {
+      "id": 4,
+      "name": "Kategorie - 2B",
+      "price": 3800,
+      "imgName": "100_2B.png"
+    },
+    {
+      "id": 5,
+      "name": "Kategorie - 1C",
+      "price": 2600,
+      "imgName": "100_1C.png"
+    },
+    {
+      "id": 6,
+      "name": "Kategorie - 2C",
+      "price": 1800,
+      "imgName": "100_2C.png"
+    }
+  ]
+}

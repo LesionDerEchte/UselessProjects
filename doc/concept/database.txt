@@ -1,0 +1,77 @@
+clubinleague, clubs, games, leagues, ratingtypes und stadiums können nur von einen Admin manuell geändert werden
+following, likes, ratings und users kann über die Website von Usern eingefügt, bearbeitet oder gelöscht werden.
+
+clubinleague
+	id (int)
+	leagueID (int) [fk]
+	clubID (int) [fk]
+
+clubs
+	id (int)
+	name (varchar)
+	short (varchar)
+	stadiumID (int) [fk]
+
+games
+	id (int)
+	clubidhome (int) [fk]
+	clubidaway (int) [fk]
+	date (datetime)
+	stadiumid (int) [fk]
+
+leagues
+	id (int)
+	name (varchar)
+	country (varchar)
+
+stadiums
+	id (int)
+	name (varchar)
+	country (varchar)
+	region (varchar)
+	city (varchar)
+	opening (int) [optional]
+	capacity (int) [optional]
+	author1 (varchar) [optional]
+	link1 (varchar) [optional]
+	author2 (varchar) [optional]
+	link2 (varchar) [optional]
+	author3 (varchar) [optional]
+	link3 (varchar) [optional]
+	author4 (varchar) [optional]
+	link4 (varchar) [optional]
+	author5 (varchar) [optional]
+	link5 (varchar) [optional]
+
+ratingtypes
+	id (int)
+	name (varchar)
+
+
+following
+	id (int)
+	userID (int) [fk]
+	followingID (int) [fk]
+
+likes
+	id (int)
+	userID (int) [fk]
+	ratingID (int) [fk]
+
+ratings
+	id (int)
+	userID (int) [fk]
+	gameID (int) [fk]
+	typeID (int) [fk]
+	rating (float)
+	message (text)
+
+users
+	id (int)
+	name (varchar(12))
+	password (varchar)
+	firstname (varchar) [optional]
+	lastname (varchar) [optional]
+	favclubid (varchar) [optional] [fk]
+	favstadiumid (varchar) [optional] [fk]
+	mail (varchar)

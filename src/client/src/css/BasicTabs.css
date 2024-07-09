@@ -1,0 +1,6 @@
+.Changefields{
+    display: flex;
+    padding: 5px;
+    gap: 15px;
+    background-color: green;
+}

@@ -1,0 +1,63 @@
+.Start{
+    width: 100%;
+    background-color:azure;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 180px;
+    background-image: url("../image/bg.jpg");
+   
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.Start h1{
+  font-size: 70px;
+  color:white
+
+
+}
+
+.Start-container{
+    background-color:azure;
+    padding: 25px;
+    border-radius: 25px;
+   
+    
+}
+
+
+
+.Signup button{
+    font-size:15px;
+    font-family:Arial;
+    width:140px;
+    height:50px;
+    border-width:0px;
+    color:rgba(0, 0, 0, 1);
+    border-color:rgba(0, 0, 0, 1);
+    font-weight:bold;
+    border-top-left-radius:7px;
+    border-top-right-radius:7px;
+    border-bottom-left-radius:7px;
+    border-bottom-right-radius:7px;
+
+
+    background:rgba(255, 255, 255, 1);
+    width: 300px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.Signup button:hover{
+    
+    background: rgba(199, 193, 193, 1);
+    box-shadow: 7px 6px 17px 4px rgba(100, 130, 151, 1);
+}
+
+
+
